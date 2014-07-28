@@ -20,6 +20,8 @@ var app = module.exports = express();
 
 var chapter = bookSum.chapter;
 var mainWords = bookSum.mainWords;
+var lawWords = bookSum.lawWords
+var clauseWords = bookSum.clauseWords
 
 console.log(chapter);
 /**
@@ -75,6 +77,14 @@ app.get('/advertising', function(req, res){
   res.send(mainWords);
 });
 
+
+app.get('/law', function(req, res){
+  res.send(lawWords);
+});
+
+app.get('/clause', function(req, res){
+  res.send(clauseWords);
+});
 
 
 // JSON API
