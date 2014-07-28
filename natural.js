@@ -11,10 +11,14 @@ countInflector = natural.CountInflector;
 soundEx = natural.SoundEx
 
 //For finding the root word stems.
+tokenizer = new natural.WordTokenizer();
 stemmer = natural.PorterStemmer; 
 wordnet = new natural.WordNet('.');
 
 stemmer.attach()
+
+
+natural.LancasterStemmer.attach();
 
 
 TfIdf = natural.TfIdf,
@@ -222,6 +226,20 @@ console.log(countInflector.nth(4));
 // console.log(classifier.classify('there is a bug in my code.'));
 // console.log(classifier.classify('write a book.'));
 
+
+
+//Not working right now
+var inputSentence = "As a simple analogy, consider two restaurants, one that requires reservations and another that neither requires reserva- tions nor accepts them. For the restaurant that requires reservations, we have to go through the hassle of calling before we leave home. But when we arrive at the restaurant we can, in principle, immediately be seated and order our meal. For the restaurant that does not require reservations, we don’t need to bother to reserve a table. But when we arrive at the restaurant, we may have to wait for a table before we can be seated.";
+var array = tokenizer.tokenize(inputSentence);
+var test = inputSentence.tokenizeAndStem();
+var joined = array.join(" ");
+
+
+// array.split(',').join(' ');
+console.log(joined);
+
+console.log(test);
+//join to string
 
 
 
