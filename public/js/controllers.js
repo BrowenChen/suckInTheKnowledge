@@ -29,8 +29,39 @@ angular.module('myApp.controllers', []).
         $scope.name = 'Error!';
       });
 
-      
+
     }
+
+
+    $scope.chapterTwo = function(){
+      $http({
+        method: 'GET',
+        url: '/law'
+      }).
+      success(function (data, status, headers, config) {
+        $scope.chTwo = data;
+      }).
+      error(function (data, status, headers, config) {
+        $scope.name = 'Error!';
+      });
+
+      
+    }    
+
+    $scope.chapterThree = function(){
+      $http({
+        method: 'GET',
+        url: '/clause'
+      }).
+      success(function (data, status, headers, config) {
+        $scope.chThree = data;
+      }).
+      error(function (data, status, headers, config) {
+        $scope.name = 'Error!';
+      });
+
+      
+    }    
 
     $scope.test = "test";
 
