@@ -87,11 +87,18 @@ html(ng-app="myApp", ng-controller='AppCtrl')
 			#zen-supporting.main.supporting(role='main')
 				#zen-explanation.explanation(role='article')
 					h3 So What is This About?
-					p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+					p Filtering out main ideas from a text is a crucial skill to have, especially in this age of overabundant filler information. The idea here is to
+						| create a tool to be able to extract the main ideas from what you read and retain these concepts for the future. After extracting the main topic
+						| words from each context, there are many different ways to apply critical or lateral thinking exercises to dive deeper in the ideas. In the end, 
+						| reading a book is all about extracting the main 
+						i  ideas
+						|  from the text, so the more efficient we are at doing that, the more we will be able to absorb from other sources. 
 						
 				#zen-participation.participation(role='article')
-					h3 TextHolder
-					p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+					h3 How Does this Work?
+					p By using node's Natural module, we can apply natural language processing tools such as tokenizing and removing noise words from a text, and analyzing the importance of each word 
+						| across other segments of a document. We can also apply bayesian classification algorithms to train certain sections to correlate to a keyword to improve our accuracy 
+						| of extracting the correct main idea from the text. 
 
 
 				footer
@@ -103,7 +110,7 @@ html(ng-app="myApp", ng-controller='AppCtrl')
 			aside.sidebar(role='complementary')
 				.wrapper
 					#design-selection.design-selection
-						h3.select Select a Design:
+						h3.select Select a Book:
 						nav(role='navigation')
 							ul
 								li
